@@ -114,7 +114,7 @@ img {
     function buildList(){
     var wrapper = document.getElementById('list-wrapper');
     wrapper.innerHTML= '';
-    var url = 'http://127.0.0.1:8081/meme/';
+    var url = 'https://xmeme-creation.herokuapp.com/meme/';
     fetch(url)
     .then((resp)=> resp.json())
     .then(function(data){
@@ -175,10 +175,10 @@ var form = document.getElementById('form-wrapper')
 form.addEventListener('submit', function(e){
     e.preventDefault();
     console.log('submitted');
-    var url = 'http://127.0.0.1:8081/meme/';
+    var url = 'https://xmeme-creation.herokuapp.com/meme/';
     var url1=url;
     if(activeItem!=null){
-        url1 = `http://127.0.0.1:8081/meme/${activeItem.id}/`;
+        url1 = `https://xmeme-creation.herokuapp.com/meme/${activeItem.id}/`;
         activeItem = null;
     }
     
@@ -230,7 +230,7 @@ function editItem(item){
 }
 function deleteItem(item){
 			console.log('Delete clicked')
-			fetch(`http://127.0.0.1:8081/meme/${item.id}/`, {
+			fetch(`https://xmeme-creation.herokuapp.com/meme/${item.id}/`, {
 				method:'DELETE', 
 				headers:{
 					'Content-type':'application/json',
