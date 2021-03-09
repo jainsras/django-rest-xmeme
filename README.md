@@ -1,4 +1,3 @@
-This is an official submission for Xmeme, by Crio.
 
 This website is built using Django Rest framework in the backend and HTML, CSS and Javascript on the frontend.
 
